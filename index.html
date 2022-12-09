@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoNeRF: Controllable Neural Radiance Fields</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+        href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+        rel="stylesheet">
+    <link
+        href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=B612+Mono&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/academicons.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 align="center">
+                    ️<i class="fa fa-sliders" aria-hidden="true" /></i> CoNeRF:
+                    Controllable Neural Radiance
+                    Fields <i class="fa fa-sliders" aria-hidden="true"></i>
+                </h1>
+                <h2 align="center">
+                    Supplementary Material
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="col s2 center">
+                Kacper Kania<sup>1,2</sup>
+            </div>
+            <div class="col s2 center">
+                Kwang Moo Yi<sup>1</sup>
+            </div>
+            <div class="col s2 center">
+                Marek Kowalski<sup>2,4</sup>
+            </div>
+            <div class="col s2 center">
+                Tomasz Trzciński<sup>2</sup>
+            </div>
+            <div class="col s2 center">
+                Andrea Tagliasacchi<sup>3,5</sup>
+            </div>
+            <div class="col s1"></div>
+        </div>
+        <div class="row">
+            <div class="col s1"> </div>
+            <div class="col s10 center">
+                University of British Columbia<sup>1</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                Warsaw University of Technology<sup>2</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                University of Toronto<sup>3</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                Microsoft<sup>4</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                Google Research<sup>5</sup>
+            </div>
+            <div class="col s1"> </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col s12 center">
+                <a class="btn-floating grey waves-effect waves-light tooltipped"
+                    data-position="bottom"
+                    data-tooltip="Code"
+                    href="https://github.com/kacperkan/conerf">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn-floating grey waves-effect waves-light tooltipped"
+                    data-position="bottom" data-tooltip="Abstract"
+                    href="https://arxiv.org/abs/2112.01983">
+                    <i class="ai ai-arxiv"></i>
+                </a>
+                <a class="btn-floating grey waves-effect waves-light tooltipped"
+                    data-position="bottom" data-tooltip="Paper"
+                    href="/conerf.pdf">
+                    <i class="fas fa-file-pdf"></i> Paper
+                </a>
+                <a class="btn-floating grey waves-effect waves-light tooltipped"
+                    data-position="bottom" data-tooltip="Dataset"
+                    href="http://cvlab.ii.pw.edu.pl:9000/conerf-dataset/datasets.zip">
+                    <i class="fas fa-database"></i> Paper
+                </a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col s3 center">
+                <video style="width: 100%" loop muted autoplay>
+                    <source
+                        src="videos/real/face-expressions-1/ours-no-text.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <div class="col s3 center">
+                <video style="width: 100%" loop muted autoplay>
+                    <source
+                        src="videos/real/face-expressions-2/ours-no-text.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <div class="col s3 center">
+                <video style="width: 100%" loop muted autoplay>
+                    <source
+                        src="videos/real/face-expressions-3/ours-no-text.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <div class="col s3 center">
+                <video style="width: 100%" loop muted autoplay>
+                    <source src="videos/real/transformer/ours-no-text.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+
+
+        <hr>
+
+        <div>
+            <div class="row">
+                <p>
+                    CoNeRF is the first method that enables explicit control of
+                    generated images. We can easily synchronize metronomes
+                    beating with different tempo, stabilize camera, change our
+                    facial expression and much more!
+                </p>
+                <div class="col s12 center">
+                    <video style="width: 100%; border: 1pt solid black;"
+                        controls>
+                        <source src="showcase.mp4" type="video/mp4">
+                        Teaser
+                    </video>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2>Generated sequences</h2>
+            <p>
+                We present generated video sequences from models trained on
+                datasets used in the paper. We directly compare visualizations
+                generated from our method with baslines: Ours-$\mathcal{M}$ and
+                HyperNeRF+$\pi$. We generate each sequence by
+                interpolating between extreme points of attributes ($-1$ and
+                $+1$) and then between randomly sampled values. And the same
+                time, we freely orbit the camera around the central object. Our
+                method generates the most realistic images while providing the
+                expected controllability of the output.
+            </p>
+            <div id="combined-container" class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Face Expressions I
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/face-expressions-1/combined.mp4"
+                                    type="video/mp4">
+                                Face Expressions I combined
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Face Expressions II
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/face-expressions-2/combined.mp4"
+                                    type="video/mp4">
+                                Face Expressions II combined
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Face Expressions III
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/face-expressions-3/combined.mp4"
+                                    type="video/mp4">
+                                Face Expressions III combined
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Metronome
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/metronome/combined.mp4"
+                                    type="video/mp4">
+                                Metronome combined
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Transformer
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/transformer/combined.mp4"
+                                    type="video/mp4">
+                                Transformer combined
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Two Metronomes
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/two-metronomes/combined.mp4"
+                                    type="video/mp4">
+                                Two Metronomes combined
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 style="font-variant: small-caps;">
+                            Synthetic
+                        </h3>
+                        <div class="row center">
+                            <video style="width: 60%" loop muted controls>
+                                <source
+                                    src="videos/real/synthetic/combined.mp4"
+                                    type="video/mp4">
+                                Synthetic combined
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div>
+            <h2>Resynchronization</h2>
+            <p>Our approach also enables resynchronization of metronomes
+                beating
+                with different rates while keeping the original camera motion.
+            </p>
+            <div class="row">
+                <div class="col s3 center">
+                    <video style="width: 100%" loop muted autoplay>
+                        <source src="videos/metronome/original.mp4"
+                            type="video/mp4">
+                    </video>
+                    <figcaption style="font-size: 1.4em;">
+                        Original Video
+                    </figcaption>
+                </div>
+                <div class="col s3 center">
+                    <video style="width: 100%" loop muted autoplay>
+                        <source src="videos/metronome/0.mp4" type="video/mp4">
+                    </video>
+                    <figcaption style="font-size: 1.4em;">
+                        0 Beats Per Minute
+                    </figcaption>
+                </div>
+                <div class="col s3 center">
+                    <video style="width: 100%" loop muted autoplay>
+                        <source src="videos/metronome/20.mp4" type="video/mp4">
+                    </video>
+                    <figcaption style="font-size: 1.4em;">
+                        20 Beats Per Minute
+                    </figcaption>
+                </div>
+                <div class="col s3 center">
+                    <video style="width: 100%" loop muted autoplay>
+                        <source src="videos/metronome/240.mp4"
+                            type="video/mp4">
+                    </video>
+                    <figcaption style="font-size: 1.4em;">
+                        120 Beats Per Minute
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h3>Synthetic Data</h3>
+            <div class="row">
+                We additionally show below two sequences generated with
+                <a href=https://github.com/google-research/kubric>Kubric
+                    [13]</a>, used during the evaluation of our method and
+                    baselines for novel view and novel attributes synthesis.
+                    </div> <div class="row">
+                    <div class="col s6 center">
+                        <p>
+                            Training sequence
+                        </p>
+                        <video style="width: 60%" class="bordered" muted
+                            controls>
+                            <source src="videos/synthetic-data/train.mp4"
+                                type="video/mp4">
+                            Training sequence
+                        </video>
+                    </div>
+                    <div class="col s6 center">
+                        <p>
+                            Validation sequence
+                        </p>
+                        <video style="width: 60%" class="bordered" muted
+                            controls>
+                            <source src="videos/synthetic-data/valid.mp4"
+                                type="video/mp4">
+                            Validation sequence
+                        </video>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <h3>Abstract</h3>
+            <div class="row">
+                <div class="col s10 offset-s1">
+                    <p>
+                        We extend neural 3D representations to allow for
+                        intuitive
+                        and
+                        interpretable user control beyond novel view rendering
+                        (i.e.
+                        camera control). We allow the user to annotate which
+                        part
+                        of
+                        the scene one wishes to control with just a small
+                        number of
+                        mask annotations in the training images. Our key idea
+                        is to
+                        treat the attributes as latent variables that are
+                        regressed
+                        by
+                        the neural network given the scene encoding. This leads
+                        to
+                        a
+                        few-shot learning framework, where attributes are
+                        discovered
+                        automatically by the framework, when annotations are
+                        not
+                        provided. We apply our method to various scenes with
+                        different
+                        types of controllable attributes (e.g. expression
+                        control
+                        on
+                        human faces, or state control in movement of inanimate
+                        objects). Overall, we demonstrate, to the best of our
+                        knowledge, for the first time novel view and novel
+                        attribute
+                        re-rendering of scenes from a single video.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <h3>Bibtex</h3>
+                <pre>
+@inproceedings{kania2022conerf,
+    title     = {{CoNeRF: Controllable Neural Radiance Fields}},
+    author    = {Kania, Kacper and Yi, Kwang Moo and Kowalski, Marek and Trzci{\'n}ski, Tomasz and Tagliasacchi, Andrea},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+    year      = {2022}
+} </pre>
+            </div>
+            <div class="row">
+                <h3>Acknowledgements</h3>
+                <p>
+                    We thank Thabo Beeler, JP Lewis, and Mark J. Matthews for
+                    their
+                    fruitful discussions, and Daniel Rebain for helping with
+                    processing the synthetic dataset. The work was partly
+                    supported
+                    by National Sciences and Engineering Research Council of
+                    Canada
+                    (NSERC), Compute Canada, and Microsoft Mixed Reality & AI
+                    Lab.
+                </p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ['$', '$'],
+                        ['\\(', '\\)']
+                    ]
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js">
+        </script>
+        <!-- Compiled and minified JavaScript -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+        </script>
+        <script src="https://kit.fontawesome.com/2f4b26bfb0.js"
+            crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.tooltipped');
+                var instances = M.Tooltip.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.tooltipped').tooltip();
+            });
+        </script>
+
+
+
+</body>
+
+</html>
