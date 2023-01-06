@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CoNeRF: Controllable Neural Radiance Fields</title>
+    <title>Diffused Heads: Diffusion Models Beat GANs on Talking-Face Generation</title>
 
     <!-- Compiled and minified CSS -->
     <link
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/additional.css">
     <link rel="stylesheet" href="css/academicons.min.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/diffusedheads/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/diffusedheads/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/diffusedheads/favicon-16x16.png">
     <link rel="manifest" href="/diffusedheads/site.webmanifest">
@@ -37,50 +37,64 @@
         <div class="row">
             <div class="col s12">
                 <h1 align="center">
-                    ️<i class="fa fa-sliders" aria-hidden="true" /></i> CoNeRF:
-                    Controllable Neural Radiance
-                    Fields <i class="fa fa-sliders" aria-hidden="true"></i>
+                    <!-- ️<i class="fa fa-sliders" aria-hidden="true" /></i>  -->
+                    Diffused Heads: Diffusion Models Beat GANs <br>on Talking-Face Generation
+                    <!-- <i class="fa fa-sliders" aria-hidden="true"></i> -->
                 </h1>
-                <h2 align="center">
+                <!-- <h2 align="center">
                     Supplementary Material
-                </h2>
+                </h2> -->
             </div>
         </div>
+        <!-- <div class="row">
+            <div class="col s1"></div>
+            <div class="col s2 center">
+                Michał Stypułkowski <sup>1</sup>
+            </div>
+            <div class="col s2 center">
+                Konstantinos Vougioukas <sup>2</sup>
+            </div>
+            <div class="col s2 center">
+                Sen He
+            </div>
+        </div> -->
         <div class="row">
-            <div class="col s1"></div>
-            <div class="col s2 center">
-                Kacper Kania<sup>1,2</sup>
+            <div class="col s1"> </div>
+            <div class="col s12 center">
+                <p style="font-size:18px">
+                    Michał Stypułkowski <sup>1</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                    Konstantinos Vougioukas <sup>2</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                    Sen He
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                    Maciej Zięba <sup>3,4</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                    Stavros Petridis <sup>2</sup>
+                <span
+                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+                    Maja Pantic <sup>2</sup>
+                </p>
             </div>
-            <div class="col s2 center">
-                Kwang Moo Yi<sup>1</sup>
-            </div>
-            <div class="col s2 center">
-                Marek Kowalski<sup>2,4</sup>
-            </div>
-            <div class="col s2 center">
-                Tomasz Trzciński<sup>2</sup>
-            </div>
-            <div class="col s2 center">
-                Andrea Tagliasacchi<sup>3,5</sup>
-            </div>
-            <div class="col s1"></div>
+            <div class="col s1"> </div>
         </div>
         <div class="row">
             <div class="col s1"> </div>
             <div class="col s10 center">
-                University of British Columbia<sup>1</sup>
+                <sup>1</sup> University of Wrocław
                 <span
                     style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
-                Warsaw University of Technology<sup>2</sup>
+                <sup>2</sup> Imperial College London
                 <span
                     style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
-                University of Toronto<sup>3</sup>
+                <sup>3</sup> Wrocław University of Science and Technology
                 <span
                     style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
-                Microsoft<sup>4</sup>
-                <span
-                    style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
-                Google Research<sup>5</sup>
+                <sup>4</sup> Tooploox
             </div>
             <div class="col s1"> </div>
         </div>
@@ -91,53 +105,47 @@
                 <a class="btn-floating grey waves-effect waves-light tooltipped"
                     data-position="bottom"
                     data-tooltip="Code"
-                    href="https://github.com/kacperkan/conerf">
+                    href="TBA">
                     <i class="fab fa-github"></i>
                 </a>
                 <a class="btn-floating grey waves-effect waves-light tooltipped"
                     data-position="bottom" data-tooltip="Abstract"
-                    href="https://arxiv.org/abs/2112.01983">
+                    href="TBA">
                     <i class="ai ai-arxiv"></i>
                 </a>
                 <a class="btn-floating grey waves-effect waves-light tooltipped"
                     data-position="bottom" data-tooltip="Paper"
-                    href="/conerf.pdf">
+                    href="diffused_heads.pdf">
                     <i class="fas fa-file-pdf"></i> Paper
                 </a>
-                <a class="btn-floating grey waves-effect waves-light tooltipped"
+                <!-- <a class="btn-floating grey waves-effect waves-light tooltipped"
                     data-position="bottom" data-tooltip="Dataset"
                     href="http://cvlab.ii.pw.edu.pl:9000/conerf-dataset/datasets.zip">
                     <i class="fas fa-database"></i> Paper
-                </a>
+                </a> -->
             </div>
         </div>
         <hr>
 
         <div class="row">
-            <div class="col s3 center">
-                <video style="width: 100%" loop muted autoplay>
+            <div class="col s4 center">
+                <video style="width: 90%" loop muted autoplay>
                     <source
-                        src="videos/real/face-expressions-1/ours-no-text.mp4"
+                        src="videos\1030_MTI_FEA_XX.mp4"
                         type="video/mp4">
                 </video>
             </div>
-            <div class="col s3 center">
-                <video style="width: 100%" loop muted autoplay>
+            <div class="col s4 center">
+                <video style="width: 90%" loop muted autoplay>
                     <source
-                        src="videos/real/face-expressions-2/ours-no-text.mp4"
+                        src="videos\1081_DFA_HAP_XX.mp4"
                         type="video/mp4">
                 </video>
             </div>
-            <div class="col s3 center">
-                <video style="width: 100%" loop muted autoplay>
+            <div class="col s4 center">
+                <video style="width: 90%" loop muted autoplay>
                     <source
-                        src="videos/real/face-expressions-3/ours-no-text.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-            <div class="col s3 center">
-                <video style="width: 100%" loop muted autoplay>
-                    <source src="videos/real/transformer/ours-no-text.mp4"
+                        src="videos\1020_IOM_SAD_XX.mp4"
                         type="video/mp4">
                 </video>
             </div>
@@ -148,274 +156,166 @@
         <hr>
 
         <div>
-            <div class="row">
-                <p>
-                    CoNeRF is the first method that enables explicit control of
-                    generated images. We can easily synchronize metronomes
-                    beating with different tempo, stabilize camera, change our
-                    facial expression and much more!
+            <div>
+                <p align="justify" style="font-size:18px">
+                    Diffused Heads is the first method successfully using a diffusion model to generate talking faces.
+                    Given a single identity frame and an audio clip containing speech, the model samples consecutive frames in an autoregressive manner, 
+                    preserving the identity, and modeling lip and head movement to match the audio input. Contrary to other methods, no additional guidance is required.
+
                 </p>
-                <div class="col s12 center">
-                    <video style="width: 100%; border: 1pt solid black;"
+                <!-- <div class="col s12 center"> -->
+                    <!-- <video style="width: 100%; border: 1pt solid black;"
                         controls>
-                        <source src="showcase.mp4" type="video/mp4">
+                        <source src="images\graphical_abstract.pdf" type="picture/pdf">
                         Teaser
-                    </video>
-                </div>
+                    </video> -->
+                <img src="images\graphical_abstract.png" alt="Overview", width=60%, class="center">
+                <!-- </div> -->
             </div>
         </div>
         <hr>
         <div>
-            <h2>Generated sequences</h2>
-            <p>
-                We present generated video sequences from models trained on
-                datasets used in the paper. We directly compare visualizations
-                generated from our method with baslines: Ours-$\mathcal{M}$ and
-                HyperNeRF+$\pi$. We generate each sequence by
-                interpolating between extreme points of attributes ($-1$ and
-                $+1$) and then between randomly sampled values. And the same
-                time, we freely orbit the camera around the central object. Our
-                method generates the most realistic images while providing the
-                expected controllability of the output.
+            <h2>Generated videos</h2>
+            <p align="justify" style="font-size:18px">
+                We present generated test samples from CREMA dataset, and generalization results. For more results and supplementary video, please contact us at <b>michal.stypulkowski[at]cs.uni.wroc.pl</b>.
             </p>
             <div id="combined-container" class="row">
                 <div class="col s12">
                     <div class="row">
                         <h3 style="font-variant: small-caps;">
-                            Face Expressions I
+                            CREMA
                         </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/face-expressions-1/combined.mp4"
-                                    type="video/mp4">
-                                Face Expressions I combined
+                        <p align="justify" style="font-size:18px">
+                            Test set examples from CREMA. None of the participants was included in the training set.
+                        </p>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1081_TSI_HAP_XX.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1021_TAI_ANG_XX.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1089_IEO_ANG_LO.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1015_TIE_ANG_XX.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1033_IOM_NEU_XX.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1052_IWW_ANG_XX.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1062_DFA_HAP_XX.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col s3 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\1082_WSI_SAD_XX.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                     <div class="row">
                         <h3 style="font-variant: small-caps;">
-                            Face Expressions II
+                            Generalization
                         </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/face-expressions-2/combined.mp4"
-                                    type="video/mp4">
-                                Face Expressions II combined
+                        <p align="justify" style="font-size:18px">
+                            Results of video generation given inputs from sources not used during the training.
+                        </p>
+                        <div class="col s4 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\lady.mp4" type="video/mp4">
                             </video>
+                            <figcaption style="font-size: 1.4em;">
+                                English female audio
+                            </figcaption>
                         </div>
-                    </div>
-                    <div class="row">
-                        <h3 style="font-variant: small-caps;">
-                            Face Expressions III
-                        </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/face-expressions-3/combined.mp4"
-                                    type="video/mp4">
-                                Face Expressions III combined
+                        <div class="col s4 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\korean.mp4" type="video/mp4">
                             </video>
+                            <figcaption style="font-size: 1.4em;">
+                                Korean female audio
+                            </figcaption>
                         </div>
-                    </div>
-                    <div class="row">
-                        <h3 style="font-variant: small-caps;">
-                            Metronome
-                        </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/metronome/combined.mp4"
-                                    type="video/mp4">
-                                Metronome combined
+                        <div class="col s4 center">
+                            <video style="width: 100%; border: 1pt solid black;"
+                                controls>
+                                <source src="videos\dalle_sound.mp4" type="video/mp4">
                             </video>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h3 style="font-variant: small-caps;">
-                            Transformer
-                        </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/transformer/combined.mp4"
-                                    type="video/mp4">
-                                Transformer combined
-                            </video>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h3 style="font-variant: small-caps;">
-                            Two Metronomes
-                        </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/two-metronomes/combined.mp4"
-                                    type="video/mp4">
-                                Two Metronomes combined
-                            </video>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h3 style="font-variant: small-caps;">
-                            Synthetic
-                        </h3>
-                        <div class="row center">
-                            <video style="width: 60%" loop muted controls>
-                                <source
-                                    src="videos/real/synthetic/combined.mp4"
-                                    type="video/mp4">
-                                Synthetic combined
-                            </video>
+                            <figcaption style="font-size: 1.4em;">
+                                DALL-E 2 image + English male audio
+                            </figcaption>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
-
-        <div>
-            <h2>Resynchronization</h2>
-            <p>Our approach also enables resynchronization of metronomes
-                beating
-                with different rates while keeping the original camera motion.
-            </p>
-            <div class="row">
-                <div class="col s3 center">
-                    <video style="width: 100%" loop muted autoplay>
-                        <source src="videos/metronome/original.mp4"
-                            type="video/mp4">
-                    </video>
-                    <figcaption style="font-size: 1.4em;">
-                        Original Video
-                    </figcaption>
-                </div>
-                <div class="col s3 center">
-                    <video style="width: 100%" loop muted autoplay>
-                        <source src="videos/metronome/0.mp4" type="video/mp4">
-                    </video>
-                    <figcaption style="font-size: 1.4em;">
-                        0 Beats Per Minute
-                    </figcaption>
-                </div>
-                <div class="col s3 center">
-                    <video style="width: 100%" loop muted autoplay>
-                        <source src="videos/metronome/20.mp4" type="video/mp4">
-                    </video>
-                    <figcaption style="font-size: 1.4em;">
-                        20 Beats Per Minute
-                    </figcaption>
-                </div>
-                <div class="col s3 center">
-                    <video style="width: 100%" loop muted autoplay>
-                        <source src="videos/metronome/240.mp4"
-                            type="video/mp4">
-                    </video>
-                    <figcaption style="font-size: 1.4em;">
-                        120 Beats Per Minute
-                    </figcaption>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <h3>Synthetic Data</h3>
-            <div class="row">
-                We additionally show below two sequences generated with
-                <a href=https://github.com/google-research/kubric>Kubric
-                    [13]</a>, used during the evaluation of our method and
-                    baselines for novel view and novel attributes synthesis.
-                    </div> <div class="row">
-                    <div class="col s6 center">
-                        <p>
-                            Training sequence
-                        </p>
-                        <video style="width: 60%" class="bordered" muted
-                            controls>
-                            <source src="videos/synthetic-data/train.mp4"
-                                type="video/mp4">
-                            Training sequence
-                        </video>
-                    </div>
-                    <div class="col s6 center">
-                        <p>
-                            Validation sequence
-                        </p>
-                        <video style="width: 60%" class="bordered" muted
-                            controls>
-                            <source src="videos/synthetic-data/valid.mp4"
-                                type="video/mp4">
-                            Validation sequence
-                        </video>
-                    </div>
-
-            </div>
-        </div>
 
         <div class="row">
             <h3>Abstract</h3>
             <div class="row">
                 <div class="col s10 offset-s1">
-                    <p>
-                        We extend neural 3D representations to allow for
-                        intuitive
-                        and
-                        interpretable user control beyond novel view rendering
-                        (i.e.
-                        camera control). We allow the user to annotate which
-                        part
-                        of
-                        the scene one wishes to control with just a small
-                        number of
-                        mask annotations in the training images. Our key idea
-                        is to
-                        treat the attributes as latent variables that are
-                        regressed
-                        by
-                        the neural network given the scene encoding. This leads
-                        to
-                        a
-                        few-shot learning framework, where attributes are
-                        discovered
-                        automatically by the framework, when annotations are
-                        not
-                        provided. We apply our method to various scenes with
-                        different
-                        types of controllable attributes (e.g. expression
-                        control
-                        on
-                        human faces, or state control in movement of inanimate
-                        objects). Overall, we demonstrate, to the best of our
-                        knowledge, for the first time novel view and novel
-                        attribute
-                        re-rendering of scenes from a single video.
+                    <p align="justify" style="font-size:18px">
+                        Talking face generation has historically struggled 
+                        to produce head movements and natural facial expressions 
+                        without guidance from additional reference videos. Recent 
+                        developments in diffusion-based generative models allow 
+                        for more realistic and stable data synthesis and their 
+                        performance on image and video generation has surpassed 
+                        that of other generative models. In this work, we present 
+                        an autoregressive diffusion model that requires only one 
+                        identity image and audio sequence to generate a video of 
+                        a realistic talking human head. Our solution is capable 
+                        of hallucinating head movements, facial expressions, 
+                        such as blinks, and preserving a given background. 
+                        We evaluate our model on two different datasets, 
+                        achieving state-of-the-art results on both of them.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <h3>Bibtex</h3>
                 <pre>
-@inproceedings{kania2022conerf,
-    title     = {{CoNeRF: Controllable Neural Radiance Fields}},
-    author    = {Kania, Kacper and Yi, Kwang Moo and Kowalski, Marek and Trzci{\'n}ski, Tomasz and Tagliasacchi, Andrea},
-    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+@inproceedings{stypulkowski2022diffused,
+    title     = {{Diffused Heads: Diffusion Models Beat GANs on Talking-Face Generation}},
+    author    = {Stypu{\l}kowski, Micha{\l} and Vougioukas, Konstantinos and He, Sen and Zi\k{e}ba, Maciej and Petridis, Stavros and Pantic, Maja},
+    booktitle = {Under review},
     year      = {2022}
 } </pre>
             </div>
             <div class="row">
                 <h3>Acknowledgements</h3>
                 <p>
-                    We thank Thabo Beeler, JP Lewis, and Mark J. Matthews for
-                    their
-                    fruitful discussions, and Daniel Rebain for helping with
-                    processing the synthetic dataset. The work was partly
-                    supported
-                    by National Sciences and Engineering Research Council of
-                    Canada
-                    (NSERC), Compute Canada, and Microsoft Mixed Reality & AI
-                    Lab.
+                    We thank Kacper Kania for the <a href="https://github.com/conerf/conerf.github.io">website's template</a>.
+
                 </p>
             </div>
         </div>

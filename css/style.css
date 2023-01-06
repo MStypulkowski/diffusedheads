@@ -142,6 +142,12 @@ img {
   display: block !important;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
